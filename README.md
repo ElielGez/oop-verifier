@@ -1,6 +1,35 @@
 # OOP Task Verifier
 
 This repository aimed to help you verify your task submition.
+Choose one of the paths:
+1. [`Check your submition file`](#check-your-submition-file) > [`Move to Java layout - Using simple directory structure (1st method)`](#move-to-java-layout---using-simple-directory-structure-1st-method) > [`Upload your project to github`](#upload-your-project-to-github).
+
+2. [`Check your submition file`](#check-your-submition-file) > [`Move to Java layout - Using Gradle (2nd method)`](#move-to-java-layout---using-gradle-2nd-method) > [`Upload your project to github`](#upload-your-project-to-github).
+
+## Table Of Content
+
+- [Check your submition file](#check-your-submition-file)
+- [Move to Java layout - Using simple directory structure (1st method)](#move-to-java-layout---using-simple-directory-structure-1st-method)
+- [Move to Java layout - Using Gradle (2nd method)](#move-to-java-layout---using-gradle-2nd-method)
+    - [1. Download gradle](#1-download-gradle)
+    - [2. Unpack the distribution](#2-unpack-the-distribution)
+        - [2.1.1 Linux & MacOS users](#211-linux--macos-users)
+        - [2.1.2 Microsoft Windows users](#212-microsoft-windows-users)
+    - [3. Configure your system environment](#3-configure-your-system-environment)
+        - [3.1.1 Linux & MacOS users](#311-linux--macos-users)
+        - [3.1.2 Microsoft Windows users](#312-microsoft-windows-users)
+    - [4. Generate layout](#4-generate-layout)
+        - [4.1.1 Linux & MacOS users](#411-linux--macos-users)
+        - [4.1.2 Microsoft Windows users](#412-microsoft-windows-users)
+    - [5. Test you did well](#5-test-you-did-well)
+    - [6. Modify `build.gradle`](#6-modify-buildgradle)
+        - [Test you did well](#test-you-did-well)
+    - [7. Put your files in it](#7-put-your-files-in-it)
+        - [Test you did well](#test-you-did-well-1)
+- [Upload your project to github](#upload-your-project-to-github)
+    - [1. Create git repository with github GUI](#1-create-git-repository-with-github-gui)
+    - [2. Go to main directory](#2-go-to-main-directory)
+    - [3. Init & push](#3-init--push)
 
 ## Check your submition file
 
@@ -35,7 +64,37 @@ Commit: 834eeeae81cf1b521a92c55f3c98fb18ccbd16d6
 See if the details are right, if not - fix your <submition_file>.  
 Please put a valid git repository url - not `git@`/`gist`/`wiki`/etc. - if you can't `git clone <url for git clone>` then your repo is invalid - which means grade will be `0`.
 
-## Move to Java layout
+## Move to Java layout - Using simple directory structure (1st method)
+
+```bash
+oop/ <-- (1)
+├── resources.txt <-- (2)
+└── src
+    ├── main
+    │   └── java
+    │       └── Ex1 <-- (3)
+    │           └── someClass.java <-- (4)
+    └── test
+        └── java
+            └── Ex1 <-- (3)
+                └── someClassTest.java <-- (5)
+```
+
+* (1) - Main directory, give it any name you want(just not `test`/`java`). From here you [initialize git](https://github.com/Avielyo10/oop-verifier#3-init--push).
+
+* (2) - `resources.txt` - when using external libraries you can choose either unzip the `jar` file into your project **or** write it on `resources.txt` as follows: Go to https://search.maven.org/ and search for your `jar` (for example: `gson`).![screenshot1](resources/Screenshot_20191223_135728.png)  
+Click on the version.  
+On your right you'll see this:  
+![screenshot2](resources/Screenshot_20191223_140125.png)  
+Copy and paste it as it is to `resources.txt` (including the word `implementation`).
+
+* (3) - Package name **is important**. For tasks 0 & 1, put your java classes under `Ex1`, for the 2nd task on `Ex2` and so on. On `src/test/java` you **MUST** use the same package names as `src/main/java`
+
+* (4) - Java classes for tasks 0 & 1.
+
+* (5) - Junit class **MUST** have the same name ends with `Test` (see `(4)`) and of course under the same package!
+
+## Move to Java layout - Using Gradle (2nd method)
 
 From now on your git repository must have the following layout:
 (Looks scary but we will do it in baby steps, don't worry)
@@ -143,7 +202,7 @@ BUILD SUCCESSFUL in 801ms
 
 Only the `BUILD <STATUS>` matters.
 
-## Modify `build.gradle`
+### 6. Modify `build.gradle`
 
 ```bash
 oop/
@@ -207,7 +266,7 @@ buildScan {
 
 You can also find it [here](oop/build.gradle).
 
-### Test you did well
+#### Test you did well
 
 ```bash
 ❯ gradle clean test
@@ -217,7 +276,7 @@ BUILD SUCCESSFUL in 801ms
 4 actionable tasks: 4 executed
 ```
 
-## Put your files in it
+### 7. Put your files in it
 
 Go to `oop/src/main/java/`, create new directory `Ex1` (not - `eX1`/`ex1`/`EX1`/`Ex0`/etc.)  
 Move your files there. Make sure that every Java class has `package Ex1;` line at the top.  
@@ -258,7 +317,7 @@ oop/
         └── resources
 ```
 
-### Test you did well
+#### Test you did well
 
 ```bash
 ❯ gradle clean test
