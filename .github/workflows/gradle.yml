@@ -1,0 +1,56 @@
+name: Veifier CI
+
+on: 
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  test_submition_file:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+
+    - name: Set up JDK 1.8
+      uses: actions/setup-java@v1
+      with:
+        java-version: 1.8
+
+    - name: Get Info
+      run: python3 check_submition.py submition_file.txt | tee data.txt
+    
+    - name: Clone and checkout
+      run: |
+        git clone `cat data.txt | grep git | awk '{print $4}'` cloner-oop/
+        git -C cloner-oop/ checkout `cat data.txt | grep Commit | awk '{print $2}'`
+        ls -al cloner-oop/
+
+    - name: Check if basic layout exists
+      run: |
+        file resources.txt >> exists.txt
+        file src/main/java >> exists.txt
+        file src/test/java >> exists.txt
+        cat exists.txt
+        ERRORS=`cat exists.txt | grep No | wc -l`
+        [[ `echo "$ERRORS"` -eq 0 ]]
+
+        file src/main/java/Ex1
+        file src/main/java/Ex2
+        file src/main/java/Ex3
+        file src/main/java/Ex4
+
+        file src/test/java/Ex1
+        file src/test/java/Ex2
+        file src/test/java/Ex3
+        file src/test/java/Ex4
+      working-directory: cloner-oop/
+
+    - name: Test Gradle
+      run: |
+        cp ../settings.gradle .
+        cp ../build.gradle .
+        gradle clean test --scan
+      working-directory: cloner-oop/
+

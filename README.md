@@ -1,10 +1,13 @@
 # OOP Task Verifier
 
-This repository aimed to help you verify your task submition.
+This repository aimed to help you verify your task submition.  
+
 Choose one of the paths:
 1. [`Check your submition file`](#check-your-submition-file) > [`Move to Java layout - Using simple directory structure (1st method)`](#move-to-java-layout---using-simple-directory-structure-1st-method) > [`Upload your project to github`](#upload-your-project-to-github).
 
 2. [`Check your submition file`](#check-your-submition-file) > [`Move to Java layout - Using Gradle (2nd method)`](#move-to-java-layout---using-gradle-2nd-method) > [`Upload your project to github`](#upload-your-project-to-github).
+
+> ***Note: All your Java classes MUST have an empty constuctor (constuctor with no arguments) && Getters&Setters for each class attribute!See `tests/` directory and try it out***
 
 ## Table Of Content
 
@@ -26,6 +29,7 @@ Choose one of the paths:
         - [Test you did well](#test-you-did-well)
     - [7. Put your files in it](#7-put-your-files-in-it)
         - [Test you did well](#test-you-did-well-1)
+    - [8. Add external libraries](#8-add-external-libraries)
 - [Upload your project to github](#upload-your-project-to-github)
     - [1. Create git repository with github GUI](#1-create-git-repository-with-github-gui)
     - [2. Go to main directory](#2-go-to-main-directory)
@@ -44,8 +48,8 @@ The submition file should be as follows:
 For example - `submition_file.txt` [content](submition_file.txt):
 
 ```bash
-https://github.com/Avielyo10/oop-verifier.git
-834eeeae81cf1b521a92c55f3c98fb18ccbd16d6
+https://github.com/Avielyo10/oop-dummy.git
+f1de90bdb776222364d967d9b3bc7396ec053e0f
 123456789_123456789
 ```
 
@@ -56,9 +60,9 @@ For example:
 ❯ python check_submition.py submition_file.txt
 
 === OUTPUT ===
-git repository is: https://github.com/Avielyo10/oop-verifier.git
+git repository is: https://github.com/Avielyo10/oop-dummy.git
 IDs are: 123456789_123456789
-Commit: 834eeeae81cf1b521a92c55f3c98fb18ccbd16d6
+Commit: f1de90bdb776222364d967d9b3bc7396ec053e0f
 ```
 
 See if the details are right, if not - fix your <submition_file>.  
@@ -93,6 +97,8 @@ Copy and paste it as it is to `resources.txt` (including the word `implementatio
 * (4) - Java classes for tasks 0 & 1.
 
 * (5) - Junit class **MUST** have the same name ends with `Test` (see `(4)`) and of course under the same package!
+
+See https://github.com/Avielyo10/oop-dummy
 
 ## Move to Java layout - Using Gradle (2nd method)
 
@@ -326,6 +332,10 @@ oop/
 BUILD SUCCESSFUL in 801ms
 4 actionable tasks: 4 executed
 ```
+
+### 8. Add external libraries
+
+See [Move to Java layout - Using simple directory structure (1st method)](#move-to-java-layout---using-simple-directory-structure-1st-method) on `resources.txt` (`(2)`).
 
 ## Upload your project to github
 
