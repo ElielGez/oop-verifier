@@ -13,6 +13,7 @@ Choose one of the paths:
 
 - [Check your submition file](#check-your-submition-file)
 - [Move to Java layout - Using simple directory structure (1st method)](#move-to-java-layout---using-simple-directory-structure-1st-method)
+    - [Check your code for compilation](#check-your-code-for-compilation)
 - [Move to Java layout - Using Gradle (2nd method)](#move-to-java-layout---using-gradle-2nd-method)
     - [1. Download gradle](#1-download-gradle)
     - [2. Unpack the distribution](#2-unpack-the-distribution)
@@ -68,6 +69,22 @@ Commit: f1de90bdb776222364d967d9b3bc7396ec053e0f
 See if the details are right, if not - fix your <submition_file>.  
 Please put a valid git repository url - not `git@`/`gist`/`wiki`/etc. - if you can't `git clone <url for git clone>` then your repo is invalid - which means grade will be `0`.
 
+### Check your code for compilation
+
+1. Go to https://github.com/Avielyo10/oop-verifier.
+
+2. On the right top click the `Fork` button.
+![fork_button](resources/fork_button.jpg)
+
+3. The project is now at https://github.com/<YOUR_GITHUB_USERNAME>/oop-verifier.
+
+4. Delete the **content** of `submition_file.txt` and put yours. Save it and push it to your repositry from above (`3.`).
+
+5. Follow [github help manual to create a pull request from a fork](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request-from-a-fork). The `base fork` is https://github.com/Avielyo10/oop-verifier and the `head fork` is https://github.com/<YOUR_GITHUB_USERNAME>/oop-verifier.
+
+6. You will see an orange dot next to your pull request, that's mean that I'm checking your `submition_file.txt` and it's content. If it turns on to green `V` then it's all good, red `X` means something went wrong. You can click on it to see what went wrong with your project or if it succeeded. See the marks here (relates only to green `V` & red `X`):
+![commit-list-statuses](resources/commit-list-statuses.png)
+
 ## Move to Java layout - Using simple directory structure (1st method)
 
 ```bash
@@ -84,13 +101,13 @@ oop/ <-- (1)
                 └── someClassTest.java <-- (5)
 ```
 
-* (1) - Main directory, give it any name you want(just not `test`/`java`). From here you [initialize git](https://github.com/Avielyo10/oop-verifier#3-init--push).
+* (1) - Main directory, give it any name you want(just not `test`/`java`). From here you [initialize git](#3-init--push).
 
 * (2) - `resources.txt` - when using external libraries you can choose either unzip the `jar` file into your project **or** write it on `resources.txt` as follows: Go to https://search.maven.org/ and search for your `jar` (for example: `gson`).![screenshot1](resources/Screenshot_20191223_135728.png)  
 Click on the version.  
 On your right you'll see this:  
 ![screenshot2](resources/Screenshot_20191223_140125.png)  
-Copy and paste it as it is to `resources.txt` (including the word `implementation`).
+Copy and paste it as it is to `resources.txt` (**including the word `implementation`**).
 
 * (3) - Package name **is important**. For tasks 0 & 1, put your java classes under `Ex1`, for the 2nd task on `Ex2` and so on. On `src/test/java` you **MUST** use the same package names as `src/main/java`
 
@@ -270,7 +287,7 @@ buildScan {
 
 ```
 
-You can also find it [here](oop/build.gradle).
+You can also find it [here](build.gradle).
 
 #### Test you did well
 
@@ -389,4 +406,4 @@ git remote add origin <your git repository>
 git push -u origin master
 ```
 
-Your project layout needs to look similarly to [this layout](https://github.com/Avielyo10/oop-verifier/tree/master/oop).
+Your project layout needs to look similarly to [this layout](https://github.com/Avielyo10/oop-dummy).
