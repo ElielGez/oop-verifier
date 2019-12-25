@@ -52,6 +52,8 @@ jobs:
       run: |
         cp ../settings.gradle .
         cp ../build.gradle .
+        sed -i '13 r resources.txt' build.gradle
+        cat build.gradle
         gradle clean test --scan
       working-directory: cloner-oop/
 

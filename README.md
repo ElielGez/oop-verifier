@@ -107,7 +107,7 @@ oop/ <-- (1)
 Click on the version.  
 On your right you'll see this:  
 ![screenshot2](resources/Screenshot_20191223_140125.png)  
-Copy and paste it as it is to `resources.txt` (**including the word `implementation`**).
+Copy and paste it as it is to `resources.txt` (**including the word `implementation`**) - Example in [`resources.txt`](resources.txt).
 
 * (3) - Package name **is important**. For tasks 0 & 1, put your java classes under `Ex1`, for the 2nd task on `Ex2` and so on. On `src/test/java` you **MUST** use the same package names as `src/main/java`
 
