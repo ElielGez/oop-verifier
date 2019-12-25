@@ -111,9 +111,9 @@ Copy and paste it as it is to `resources.txt` (**including the word `implementat
 
 * (3) - Package name **is important**. For tasks 0 & 1, put your java classes under `Ex1`, for the 2nd task on `Ex2` and so on. On `src/test/java` you **MUST** use the same package names as `src/main/java`
 
-* (4) - Java classes for tasks 0 & 1.
+* (4) - Java classes for tasks 0 & 1, they all should `import package Ex1;`, for task 2 `import package Ex2;` and so on.
 
-* (5) - Junit class **MUST** have the same name ends with `Test` (see `(4)`) and of course under the same package!
+* (5) - Junit class **MUST** have the same name ends with `Test` (see `(4)`) and of course **under the same package name!**
 
 See https://github.com/Avielyo10/oop-dummy
 

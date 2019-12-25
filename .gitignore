@@ -1,1 +1,7 @@
 .vscode/
+.settings/
+.vscode/
+.gradle/
+
+.classpath
+.project
