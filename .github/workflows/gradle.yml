@@ -48,12 +48,15 @@ jobs:
         file src/test/java/Ex4
       working-directory: cloner-oop/
 
-    - name: Test Gradle
+    - name: Test with Gradle
       run: |
         cp ../settings.gradle .
         cp ../build.gradle .
         sed -i '13 r resources.txt' build.gradle
         cat build.gradle
+
+        rm -rf src/test/java/*
+        cp -r ../tests/* src/test/java/
         gradle clean test --scan
       working-directory: cloner-oop/
 
