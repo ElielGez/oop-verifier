@@ -1,17 +1,17 @@
 # OOP Task Verifier
 
-This repository aimed to help you verify your task submition.  
+This repository aimed to help you verify your task submission.  
 
 Choose one of the paths:
-1. [`Check your submition file`](#check-your-submition-file) > [`Move to Java layout - Using simple directory structure (1st method)`](#move-to-java-layout---using-simple-directory-structure-1st-method) > [`Upload your project to github`](#upload-your-project-to-github).
+1. [`Check your submission file`](#check-your-submission-file) > [`Move to Java layout - Using simple directory structure (1st method)`](#move-to-java-layout---using-simple-directory-structure-1st-method) > [`Upload your project to github`](#upload-your-project-to-github).
 
-2. [`Check your submition file`](#check-your-submition-file) > [`Move to Java layout - Using Gradle (2nd method)`](#move-to-java-layout---using-gradle-2nd-method) > [`Upload your project to github`](#upload-your-project-to-github).
+2. [`Check your submission file`](#check-your-submission-file) > [`Move to Java layout - Using Gradle (2nd method)`](#move-to-java-layout---using-gradle-2nd-method) > [`Upload your project to github`](#upload-your-project-to-github).
 
 > ***Note: All your Java classes MUST have an empty constuctor (constuctor with no arguments) && Getters&Setters for each class attribute!See `tests/` directory and try it out***
 
 ## Table Of Content
 
-- [Check your submition file](#check-your-submition-file)
+- [Check your submission file](#check-your-submission-file)
 - [Move to Java layout - Using simple directory structure (1st method)](#move-to-java-layout---using-simple-directory-structure-1st-method)
     - [Check your code for compilation](#check-your-code-for-compilation)
 - [Move to Java layout - Using Gradle (2nd method)](#move-to-java-layout---using-gradle-2nd-method)
@@ -36,9 +36,9 @@ Choose one of the paths:
     - [2. Go to main directory](#2-go-to-main-directory)
     - [3. Init & push](#3-init--push)
 
-## Check your submition file
+## Check your submission file
 
-The submition file should be as follows:  
+The submission file should be as follows:  
 
 ```bash
 <url for git clone>
@@ -46,7 +46,7 @@ The submition file should be as follows:
 <ids>
 ```
 
-For example - `submition_file.txt` [content](submition_file.txt):
+For example - `submission_file.txt` [content](submission_file.txt):
 
 ```bash
 https://github.com/Avielyo10/oop-dummy.git
@@ -54,11 +54,11 @@ f1de90bdb776222364d967d9b3bc7396ec053e0f
 123456789_123456789
 ```
 
-Run `check_submition`: `python check_submition.py <submition_file.txt>`.  
+Run `check_submission`: `python check_submission.py <submission_file.txt>`.  
 For example:
 
 ```bash
-❯ python check_submition.py submition_file.txt
+❯ python check_submission.py submission_file.txt
 
 === OUTPUT ===
 git repository is: https://github.com/Avielyo10/oop-dummy.git
@@ -66,7 +66,7 @@ IDs are: 123456789_123456789
 Commit: f1de90bdb776222364d967d9b3bc7396ec053e0f
 ```
 
-See if the details are right, if not - fix your <submition_file>.  
+See if the details are right, if not - fix your <submission_file>.  
 Please put a valid git repository url - not `git@`/`gist`/`wiki`/etc. - if you can't `git clone <url for git clone>` then your repo is invalid - which means grade will be `0`.
 
 ### Check your code for compilation
@@ -78,11 +78,11 @@ Please put a valid git repository url - not `git@`/`gist`/`wiki`/etc. - if you c
 
 3. The project is now at https://github.com/<YOUR_GITHUB_USERNAME>/oop-verifier.
 
-4. Delete the **content** of `submition_file.txt` and put yours. Save it and push it to your repositry from above (`3.`).
+4. Delete the **content** of `submission_file.txt` and put yours. Save it and push it to your repositry from above (`3.`).
 
 5. Follow [github help manual to create a pull request from a fork](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request-from-a-fork). The `base fork` is https://github.com/Avielyo10/oop-verifier and the `head fork` is https://github.com/<YOUR_GITHUB_USERNAME>/oop-verifier.
 
-6. You will see an orange dot next to your pull request, that's mean that I'm checking your `submition_file.txt` and it's content. If it turns on to green `V` then it's all good, red `X` means something went wrong. You can click on it to see what went wrong with your project or if it succeeded. See the marks here (relates only to green `V` & red `X`):
+6. You will see an orange dot next to your pull request, that's mean that I'm checking your `submission_file.txt` and it's content. If it turns on to green `V` then it's all good, red `X` means something went wrong. You can click on it to see what went wrong with your project or if it succeeded. See the marks here (relates only to green `V` & red `X`):
 ![commit-list-statuses](resources/commit-list-statuses.png)
 
 ## Move to Java layout - Using simple directory structure (1st method)
