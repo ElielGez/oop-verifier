@@ -57,6 +57,6 @@ jobs:
 
         rm -rf src/test/java/*
         cp -r ../tests/* src/test/java/
-        gradle clean test --scan
+        gradle clean test --scan --parallel
       working-directory: cloner-oop/
 

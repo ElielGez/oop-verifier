@@ -5,11 +5,6 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import Ex1.ComplexFunction;
-import Ex1.Polynom;
-import Ex1.Operation;
-import Ex1.function;
-
 class ComplexFunctionTest {
 
 	private static ComplexFunction cf;
