@@ -35,16 +35,16 @@ jobs:
         file src/test/java >> exists.txt
         file src/main/java/Ex1 >> exists.txt
         file src/test/java/Ex1 >> exists.txt
+        file src/main/java/Ex2 >> exists.txt
+        file src/test/java/Ex2 >> exists.txt
 
         cat exists.txt
         ERRORS=`cat exists.txt | grep No | wc -l`
         [[ `echo "$ERRORS"` -eq 0 ]]
 
-        file src/main/java/Ex2
         file src/main/java/Ex3
         file src/main/java/Ex4
 
-        file src/test/java/Ex2
         file src/test/java/Ex3
         file src/test/java/Ex4
       working-directory: cloner-oop/
