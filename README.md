@@ -7,7 +7,7 @@ Choose one of the paths:
 
 2. [`Check your submission file`](#check-your-submission-file) > [`Move to Java layout - Using Gradle (2nd method)`](#move-to-java-layout---using-gradle-2nd-method) > [`Upload your project to github`](#upload-your-project-to-github).
 
-> ***Note: All your Java classes MUST have an empty constuctor (constuctor with no arguments) && Getters&Setters for each class attribute!See `tests/` directory and try it out***
+> ***Note: All your Java classes MUST have an empty constuctor (constuctor with no arguments) && Getters&Setters for each class attribute!See `tests/` directory and try it out, passing all the checks doesn't mean you passed all the tests!***
 
 ## Table Of Content
 
