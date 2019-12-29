@@ -23,7 +23,7 @@ class ComplexFunctionTest {
 	public static void init(){
 		cf = new ComplexFunction(new Polynom());
 		f1 = cf.initFromString("3.1+2.4x^2-x^4");
-		f2 = cf.initFromString("5+2x-3.3x+0.1x^5");
+		f2 = cf.initFromString("5-1.3x+0.1x^5");
 		
 		cfDiv = new ComplexFunction("div", f1, f2);
 		cfMul = new ComplexFunction("mul", f1, f2);
@@ -40,37 +40,37 @@ class ComplexFunctionTest {
 
 	@Test
 	public void testDivConstructor(){
-		assertEquals(cfDiv.toString(), "div(3.1+2.4x^2-x^4,5+2x-3.3x+0.1x^5)");
+		assertEquals(cfDiv.toString(), "div(-1.0x^4+2.4x^2+3.1,0.1x^5-1.3x+5.0)");
 		assertEquals(cfDiv.toString(), new ComplexFunction(Operation.Divid, f1, f2).toString());
 	}
 
 	@Test
 	public void testMulConstructor(){
-		assertEquals(cfMul.toString(), "mul(3.1+2.4x^2-x^4,5+2x-3.3x+0.1x^5)");
+		assertEquals(cfMul.toString(), "mul(-1.0x^4+2.4x^2+3.1,0.1x^5-1.3x+5.0)");
 		assertEquals(cfMul.toString(), new ComplexFunction(Operation.Times, f1, f2).toString());
 	}
 
 	@Test
 	public void testPlusConstructor(){
-		assertEquals(cfPlus.toString(), "plus(3.1+2.4x^2-x^4,5+2x-3.3x+0.1x^5)");
+		assertEquals(cfPlus.toString(), "plus(-1.0x^4+2.4x^2+3.1,0.1x^5-1.3x+5.0)");
 		assertEquals(cfPlus.toString(), new ComplexFunction(Operation.Plus, f1, f2).toString());
 	}
 
 	@Test
 	public void testMinConstructor(){
-		assertEquals(cfMin.toString(), "min(3.1+2.4x^2-x^4,5+2x-3.3x+0.1x^5)");
+		assertEquals(cfMin.toString(), "min(-1.0x^4+2.4x^2+3.1,0.1x^5-1.3x+5.0)");
 		assertEquals(cfMin.toString(), new ComplexFunction(Operation.Min, f1, f2).toString());
 	}
 
 	@Test
 	public void testMaxConstructor(){
-		assertEquals(cfMax.toString(), "max(3.1+2.4x^2-x^4,5+2x-3.3x+0.1x^5)");
+		assertEquals(cfMax.toString(), "max(-1.0x^4+2.4x^2+3.1,0.1x^5-1.3x+5.0)");
 		assertEquals(cfMax.toString(), new ComplexFunction(Operation.Max, f1, f2).toString());
 	}
 
 	@Test
 	public void testCompConstructor(){
-		assertEquals(cfComp.toString(), "comp(3.1+2.4x^2-x^4,5+2x-3.3x+0.1x^5)");
+		assertEquals(cfComp.toString(), "comp(-1.0x^4+2.4x^2+3.1,0.1x^5-1.3x+5.0)");
 		assertEquals(cfComp.toString(), new ComplexFunction(Operation.Comp, f1, f2).toString());
 	}
 
