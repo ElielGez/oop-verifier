@@ -1,3 +1,3 @@
-https://github.com/Avielyo10/oop-dummy.git
-f1de90bdb776222364d967d9b3bc7396ec053e0f
-123456789_123456789
+https://github.com/ElielGez/Ex2.git
+606cad367df46f31dd75c1d2769391800a2e57bd
+316519966_206797516
